@@ -1,0 +1,7 @@
+.video-container {
+    @apply w-full h-screen;
+}
+
+.video {
+    @apply relative w-full h-full object-cover;
+}

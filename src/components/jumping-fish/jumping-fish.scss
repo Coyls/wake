@@ -1,0 +1,16 @@
+.fish {
+    width: 100px;
+    transform: scaleX(-1);
+}
+
+.fish-container {
+    z-index: -1;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 700px;
+    height: 700px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
