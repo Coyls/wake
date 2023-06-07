@@ -12,8 +12,11 @@ export const Home = () => {
       <Navbar />
       <Landing />
       <HorizontalScroll />
+      <div className="deep-gradient">
+
       <Timeline />
       <SinkingBoat />
+      </div>
       <Footer />
     </main>
   );
