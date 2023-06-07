@@ -1,10 +1,15 @@
 .fish-line {
     // --dashOffest: 0;
 
-    stroke-dasharray: 3000;
+    stroke-dasharray: 2500;
     // stroke-dashoffset: 3000;
     // animation: dash 10s linear forwards;
 }
+
+.hook-container {
+    transform: translate(-8px, 300px);
+}
+
 /* 
 @keyframes dash {
     to {
