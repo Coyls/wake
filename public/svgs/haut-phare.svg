@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Calque_2" data-name="Calque 2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 181.52 299.56">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #f7eae1;
+      }
+
+      .cls-2 {
+        fill: #699;
+      }
+
+      .cls-3 {
+        fill: #303533;
+      }
+
+      .cls-4 {
+        fill: #cdc2b9;
+      }
+
+      .cls-5 {
+        fill: none;
+        stroke: #303533;
+        stroke-miterlimit: 10;
+        stroke-width: 2px;
+      }
+    </style>
+  </defs>
+  <g id="phare">
+    <rect class="cls-4" x="1" y="79.25" width="17.91" height="219.8"/>
+    <rect class="cls-1" x="18.91" y="79.25" width="78.63" height="219.8"/>
+    <rect class="cls-1" x="97.55" y="79.25" width="42.52" height="219.8"/>
+    <rect class="cls-2" x="1" y="104.02" width="139.06" height="67.28"/>
+    <rect class="cls-5" x="1" y="104.02" width="139.06" height="67.28"/>
+    <line class="cls-5" x1="22.83" y1="104.02" x2="22.83" y2="171.3"/>
+    <line class="cls-5" x1="88.88" y1="104.02" x2="88.88" y2="171.3"/>
+    <polyline class="cls-3" points="1 79.25 140.06 79.25 137.59 57.38 119.84 23.53 83.51 0 42.23 0 19.53 9.08 1 25.65"/>
+    <polyline class="cls-5" points="155.56 299.06 180.52 256.34 180.52 201.44 1 201.44"/>
+    <rect class="cls-3" x="1" y="238.59" width="179.52" height="15.69"/>
+    <line class="cls-5" x1="56.68" y1="201.44" x2="56.68" y2="238.59"/>
+    <line class="cls-5" x1="119.84" y1="201.44" x2="119.84" y2="238.59"/>
+    <line class="cls-5" x1="5.08" y1="254.27" x2="5.08" y2="299.06"/>
+    <line class="cls-5" x1="109.52" y1="254.27" x2="109.52" y2="299.06"/>
+  </g>
+</svg>

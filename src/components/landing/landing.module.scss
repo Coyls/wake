@@ -1,7 +1,4 @@
-.video-container {
+.sky {
     @apply w-full h-screen;
-}
-
-.video {
-    @apply relative w-full h-full object-cover;
+    background-color: #73a0c9;
 }

@@ -3,6 +3,7 @@ import { gsap } from "gsap/dist/gsap";
 import { useEffect } from "react";
 import "./horizontal-scroll.scss";
 import Waves from "../waves/Waves";
+import Image from "next/image";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -29,10 +30,25 @@ export const HorizontalScroll = () => {
   return (
     <div className="wrapper">
       <section className="panel">
-        <h1>SCROLL DOWN</h1>
+        <div className="absolute phare  w-[1920px] h-[1600px]">
+
+        <Image
+          src="/svgs/phare.svg"
+          fill
+          style={{ objectFit: "cover" }}
+          alt="phare"
+          />
+          </div>
       </section>
       <section className="panel overflow-x-hidden">
-        <h2>ONE</h2>
+        <div className="absolute fisher-container w-[1600px] h-[800px]">
+          <Image
+            src="/svgs/fisher.svg"
+            fill
+            style={{ objectFit: "cover" }}
+            alt="fisherman"
+          />
+        </div>
         <Waves />
       </section>
     </div>
