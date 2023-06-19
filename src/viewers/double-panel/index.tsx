@@ -1,5 +1,6 @@
 import { FC, ReactNode, useMemo } from "react";
 import styles from "./index.module.scss";
+import cls from "classnames";
 
 type Props = {
   bgColor: string;
@@ -9,7 +10,7 @@ type Props = {
   children?: ReactNode;
 };
 
-export const Panel: FC<Props> = (props) => {
+export const DoublePanel: FC<Props> = (props) => {
   const { bgColor, top, left, translate, children } = props;
 
   const translateTop = useMemo((): string => {
@@ -22,7 +23,7 @@ export const Panel: FC<Props> = (props) => {
 
   return (
     <div
-      className={styles.container}
+      className={cls(styles.container, styles.double)}
       style={{
         backgroundColor: bgColor,
         top: translateTop,

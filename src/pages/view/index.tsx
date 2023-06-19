@@ -1,9 +1,11 @@
+import { Timeline } from "@/components/timeline";
 import { Container } from "@/viewers/container";
+import { DoublePanel } from "@/viewers/double-panel/index";
 import { Panel } from "@/viewers/panel";
 import { Window } from "@/viewers/window";
-import { useState, useEffect, useMemo, CSSProperties } from "react";
+import { useEffect, useMemo, useState } from "react";
 import "./index.scss";
-import { SinkingBoat } from "@/components/sinking-boat/sinking-boat";
+import { Waves } from "@/components";
 
 const steps = {
   0: {
@@ -99,8 +101,11 @@ const View = () => {
       <Container>P1</Container>
       <Container>P2</Container>
       <Container>P3</Container>
-      <Container>P4</Container>
-      <Container>P5</Container>
+
+      <div id="gsap-timeline-section">
+        <Container>P4</Container>
+        <Container>p5</Container>
+      </div>
       <Container>P6</Container>
       <Window>
         <Panel bgColor="red" top={0} left={0} translate={translation}>
@@ -110,16 +115,19 @@ const View = () => {
           <p id="blue">Blue</p>
         </Panel>
         <Panel bgColor="green" top={100} left={100} translate={translation}>
-          <p id="green">Green</p>
+          <Waves />
         </Panel>
-        <Panel bgColor="yellow" top={200} left={100} translate={translation}>
+        <DoublePanel
+          bgColor="pink"
+          top={200}
+          left={100}
+          translate={translation}
+        >
+          <Timeline />
+        </DoublePanel>
+        <Panel bgColor="yellow" top={400} left={100} translate={translation}>
           <p id="yellow">Yellow</p>
         </Panel>
-        <Panel bgColor="orange" top={300} left={100} translate={translation}>
-          {/* <p id="orange">orange</p> */}
-          <SinkingBoat />
-        </Panel>
-        <SinkingBoat />
       </Window>
     </>
   );

@@ -2,7 +2,7 @@ import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
 import { gsap } from "gsap/dist/gsap";
 import { useEffect } from "react";
 import "./horizontal-scroll.scss";
-import Waves from "../waves/Waves";
+import Waves from "../waves";
 import Image from "next/image";
 
 gsap.registerPlugin(ScrollTrigger);
