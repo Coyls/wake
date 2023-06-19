@@ -66,11 +66,7 @@ export const SinkingBoat = () => {
           <img src="images/background.jpg" />
           <div className="calque"></div>
         </div>
-        <div className="secondary-imgs">
-          <img src="images/bg1.jpg" className="img1" />
-          <img src="images/bg3.jpg" className="img2" />
-          <img src="images/bg2.jpg" className="img3" />
-        </div>
+        
       </div>
     </section>
   );
