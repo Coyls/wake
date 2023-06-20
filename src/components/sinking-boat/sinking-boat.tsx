@@ -35,15 +35,6 @@ export const SinkingBoat = () => {
       },
       y: 500,
     });
-    gsap.from(".secondary-imgs img", {
-      scrollTrigger: {
-        trigger: ".big-section",
-        start: "center center",
-        scrub: 1,
-      },
-      y: 100,
-      stagger: 0.1,
-    });
   }, []);
 
   return (
@@ -66,7 +57,6 @@ export const SinkingBoat = () => {
           <img src="images/background.jpg" />
           <div className="calque"></div>
         </div>
-        
       </div>
     </section>
   );
