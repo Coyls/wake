@@ -6,6 +6,7 @@ import { Window } from "@/viewers/window";
 import { useEffect, useMemo, useState } from "react";
 import "./index.scss";
 import { Waves } from "@/components";
+import Image from "next/image";
 
 const steps = {
   0: {
@@ -112,9 +113,22 @@ const View = () => {
           <p id="red">Red</p>
         </Panel>
         <Panel bgColor="blue" top={100} left={0} translate={translation}>
-          <p id="blue">Blue</p>
+          {/* <div className="absolute w-[200vh] h-[100vh] left-0 bottom-0">
+            <Image src="/svgs/bas-phare.svg" alt="bottom lighthouse" fill />
+          </div> */}
+          <div className="absolute w-[220vh] h-[90vh] right-0 bottom-0">
+            <Image src="/svgs/plage.svg" alt="beach" fill />
+          </div>
         </Panel>
         <Panel bgColor="green" top={100} left={100} translate={translation}>
+          <div className="absolute w-[200vh] h-[100vh] left-1/2 bottom-0">
+            <Image
+              src="/svgs/fisher.svg"
+              style={{ objectFit: "cover" }}
+              alt="fisherman"
+              fill
+            />
+          </div>
           <Waves />
         </Panel>
         <DoublePanel
