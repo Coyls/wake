@@ -1,5 +1,5 @@
 .ocean {
-    height: 5%;
+    height: 10%;
     width: 100%;
     position: absolute;
     bottom: 0;
@@ -8,21 +8,21 @@
 }
 
 .wave {
-    background: url(https://cdn.kcak11.com/codepen_assets/wave_animation/wave.svg) repeat-x;
-    // background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 88.7'%3E%3Cpath d='M800 56.9c-155.5 0-204.9-50-405.5-49.9-200 0-250 49.9-394.5 49.9v31.8h800v-.2-31.6z' fill='%23003F7C'/%3E%3C/svg%3E") repeat-x;
+    background: url("/svgs/vague-1.svg") repeat-x;
+
+    // background: url(https://cdn.kcak11.com/codepen_assets/wave_animation/wave.svg) repeat-x;
 
     position: absolute;
-    top: -150px;
     width: 6400px;
-    height: 198px;
+    height: 20vh;
     animation: wave 7s cubic-bezier(0.36, 0.45, 0.63, 0.53) infinite;
     transform: translate3d(0, 0, 0);
 }
 
-.wave:nth-of-type(2) {
-    top: -115px;
-    animation: wave 7s cubic-bezier(0.36, 0.45, 0.63, 0.53) -0.125s infinite, swell 7s ease -1.25s infinite;
-    opacity: 1;
+.wave:nth-of-type(1) {
+    background: url("/svgs/vague-2.svg") repeat-x;
+    animation: wave 8s cubic-bezier(0.36, 0.45, 0.63, 0.53) -0.125s infinite; //, swell 7s ease -1.25s infinite;
+    opacity: 0.9;
 }
 
 @keyframes wave {
@@ -41,7 +41,4 @@
     50% {
         transform: translate3d(0, 5px, 0);
     }
-}
-.endWave {
-    display: none;
 }

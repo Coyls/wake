@@ -76,9 +76,14 @@ export const Timeline = () => {
   return (
     <section
       ref={timelineRef}
-      className="flex flex-col items-center h-full w-full"
+      className="flex flex-row sm:justify-center h-full w-full"
     >
-      <div className={cls("absolute w-12 h-12", "gsap-hook-container")}>
+      <div
+        className={cls(
+          "absolute w-12 h-12 left-[4.1%] sm:left-auto",
+          "gsap-hook-container"
+        )}
+      >
         <svg
           id="Calque_2"
           data-name="Calque 2"
@@ -94,7 +99,7 @@ export const Timeline = () => {
 
       {lineProps && (
         <svg
-          className="relative"
+          className="relative ml-[10%] sm:ml-0"
           width="2"
           height={lineProps.height}
           viewBox={lineProps.viewBox}

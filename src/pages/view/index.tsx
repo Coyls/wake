@@ -5,7 +5,7 @@ import { Panel } from "@/viewers/panel";
 import { Window } from "@/viewers/window";
 import { useEffect, useMemo, useState } from "react";
 import "./index.scss";
-import { Waves } from "@/components";
+import { Landing, Waves } from "@/components";
 import Image from "next/image";
 
 const steps = {
@@ -99,29 +99,36 @@ const View = () => {
 
   return (
     <>
-      <Container>P1</Container>
-      <Container>P2</Container>
-      <Container>P3</Container>
+      <div className="w-full h-full background-sea">
+        <Container>P1</Container>
+        <Container>P2</Container>
+        <Container>P3</Container>
 
-      <div id="gsap-timeline-section">
-        <Container>P4</Container>
-        <Container>p5</Container>
+        <div id="gsap-timeline-section">
+          <Container>P4</Container>
+          <Container>p5</Container>
+        </div>
+        <Container>P6</Container>
       </div>
-      <Container>P6</Container>
       <Window>
-        <Panel bgColor="red" top={0} left={0} translate={translation}>
-          <p id="red">Red</p>
+        <Panel bgColor="transparent" top={0} left={0} translate={translation}>
+          <Landing />
         </Panel>
-        <Panel bgColor="blue" top={100} left={0} translate={translation}>
-          {/* <div className="absolute w-[200vh] h-[100vh] left-0 bottom-0">
-            <Image src="/svgs/bas-phare.svg" alt="bottom lighthouse" fill />
-          </div> */}
-          <div className="absolute w-[220vh] h-[90vh] right-0 bottom-0">
+        <Panel bgColor="transparent" top={100} left={0} translate={translation}>
+          <div className="absolute w-[40vh] h-[160vh] left-0 bottom-0">
+            <Image src="/svgs/phare.svg" alt="lighthouse" fill />
+          </div>
+          <div className="absolute w-[320vh] h-[25vh] right-0 bottom-0 z-30">
             <Image src="/svgs/plage.svg" alt="beach" fill />
           </div>
         </Panel>
-        <Panel bgColor="green" top={100} left={100} translate={translation}>
-          <div className="absolute w-[200vh] h-[100vh] left-1/2 bottom-0">
+        <Panel
+          bgColor="transparent"
+          top={100}
+          left={100}
+          translate={translation}
+        >
+          <div className="absolute w-[200vh] h-[100vh] left-[10%] sm:left-1/2 bottom-0">
             <Image
               src="/svgs/fisher.svg"
               style={{ objectFit: "cover" }}
@@ -132,14 +139,19 @@ const View = () => {
           <Waves />
         </Panel>
         <DoublePanel
-          bgColor="pink"
+          bgColor="transparent"
           top={200}
           left={100}
           translate={translation}
         >
           <Timeline />
         </DoublePanel>
-        <Panel bgColor="yellow" top={400} left={100} translate={translation}>
+        <Panel
+          bgColor="transparent"
+          top={400}
+          left={100}
+          translate={translation}
+        >
           <p id="yellow">Yellow</p>
         </Panel>
       </Window>
