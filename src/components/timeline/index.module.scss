@@ -1,3 +1,6 @@
 .hook-container {
-    transform: translate(1px, 300px);
+    transform: translateX(-47%);
+    @screen sm {
+        transform: translateX(0);
+    }
 }

@@ -1,8 +1,8 @@
+import cls from "classnames";
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
 import { gsap } from "gsap/dist/gsap";
 import { useEffect, useRef, useState } from "react";
-import styles from "./timeline.module.scss";
-import cls from "classnames";
+import styles from "./index.module.scss";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -80,8 +80,9 @@ export const Timeline = () => {
     >
       <div
         className={cls(
-          "absolute w-12 h-12 left-[4.1%] sm:left-auto",
-          "gsap-hook-container"
+          "absolute w-12 h-12 ml-[10%] sm:ml-0",
+          "gsap-hook-container",
+          styles["hook-container"]
         )}
       >
         <svg
