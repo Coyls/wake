@@ -5,32 +5,37 @@ import { Panel } from "@/viewers/panel";
 import { Window } from "@/viewers/window";
 import { useEffect, useMemo, useState } from "react";
 import "./index.scss";
-import { Landing, Waves } from "@/components";
+import { Landing, SinkingBoat, Waves } from "@/components";
 import Image from "next/image";
+import { Lenis as ReactLenis } from "@studio-freight/react-lenis";
 
 const steps = {
   0: {
     top: 0,
     left: 0,
   },
-  20: {
+  17: {
     top: 100,
     left: 0,
   },
-  40: {
+  33: {
     top: 100,
     left: 100,
   },
-  60: {
+  50: {
     top: 200,
     left: 100,
   },
-  80: {
+  66: {
     top: 300,
     left: 100,
   },
-  100: {
+  83: {
     top: 400,
+    left: 100,
+  },
+  100: {
+    top: 500,
     left: 100,
   },
 };
@@ -99,24 +104,29 @@ const View = () => {
 
   return (
     <>
-      <div className="w-full h-full background-sea">
-        <Container>P1</Container>
-        <Container>P2</Container>
-        <Container>P3</Container>
+      <ReactLenis root>
+        <div className="background-sea">
+          <Container></Container>
+          <Container></Container>
+          <Container></Container>
 
-        <div id="gsap-timeline-section">
-          <Container>P4</Container>
-          <Container>p5</Container>
+          <div id="gsap-timeline-section">
+            <Container>P4</Container>
+            <Container>p5</Container>
+          </div>
+          <div id="gsap-sinking-boat-section">
+            <Container></Container>
+            <Container></Container>
+          </div>
         </div>
-        <Container>P6</Container>
-      </div>
+      </ReactLenis>
       <Window>
         <Panel bgColor="transparent" top={0} left={0} translate={translation}>
           <Landing />
         </Panel>
         <Panel bgColor="transparent" top={100} left={0} translate={translation}>
           <div className="absolute w-[40vh] h-[160vh] left-0 bottom-0">
-            <Image src="/svgs/phare.svg" alt="lighthouse" fill />
+            <Image priority src="/svgs/phare.svg" alt="lighthouse" fill />
           </div>
           <div className="absolute w-[320vh] h-[25vh] right-0 bottom-0 z-30">
             <Image src="/svgs/plage.svg" alt="beach" fill />
@@ -146,14 +156,36 @@ const View = () => {
         >
           <Timeline />
         </DoublePanel>
-        <Panel
+        <DoublePanel
           bgColor="transparent"
           top={400}
           left={100}
           translate={translation}
         >
-          <p id="yellow">Yellow</p>
+          <SinkingBoat />
+        </DoublePanel>
+        {/* <Panel
+          bgColor="transparent"
+          top={400}
+          left={100}
+          translate={translation}
+        >
+          <div className="absolute w-full h-full z-10">
+            <Image
+              className="sinking-boat will-change-transform"
+              src="/svgs/boat.svg"
+              fill
+              style={{ objectFit: "cover" }}
+              alt="sinkig boat"
+            />
+          </div>
         </Panel>
+        <Panel
+          bgColor="green"
+          top={500}
+          left={100}
+          translate={translation}
+        ></Panel> */}
       </Window>
     </>
   );
