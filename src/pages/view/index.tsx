@@ -7,7 +7,7 @@ import { useEffect, useMemo, useState } from "react";
 import "./index.scss";
 import { Landing, NewSinkingBoat, Waves } from "@/components";
 import Image from "next/image";
-import { SinkingBoat } from "@/components/sinking-boat/sinking-boat";
+import { Lenis as ReactLenis } from "@studio-freight/react-lenis";
 
 const steps = {
   0: {
@@ -18,19 +18,19 @@ const steps = {
     top: 100,
     left: 0,
   },
-  34: {
+  33: {
     top: 100,
     left: 100,
   },
-  51: {
+  50: {
     top: 200,
     left: 100,
   },
-  67: {
+  66: {
     top: 300,
     left: 100,
   },
-  85: {
+  83: {
     top: 400,
     left: 100,
   },
@@ -104,18 +104,22 @@ const View = () => {
 
   return (
     <>
-      <div className="w-full h-full background-sea">
-        <Container>P1</Container>
-        <Container>P2</Container>
-        <Container>P3</Container>
+      <ReactLenis root>
+        <div className="background-sea">
+          <Container>P1</Container>
+          <Container>P2</Container>
+          <Container>P3</Container>
 
-        <div id="gsap-timeline-section">
-          <Container>P4</Container>
-          <Container>p5</Container>
+          <div id="gsap-timeline-section">
+            <Container>P4</Container>
+            <Container>p5</Container>
+          </div>
+          <div id="gsap-sinking-boat-section">
+            <Container>P6</Container>
+            <Container>P7</Container>
+          </div>
         </div>
-        <Container>P6</Container>
-        <Container>P7</Container>
-      </div>
+      </ReactLenis>
       <Window>
         <Panel bgColor="transparent" top={0} left={0} translate={translation}>
           <Landing />

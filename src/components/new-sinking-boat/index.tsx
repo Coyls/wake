@@ -1,6 +1,6 @@
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
 import { gsap } from "gsap/dist/gsap";
-import { useEffect } from "react";
+import { useEffect, useRef } from "react";
 import styles from "./index.module.scss";
 import Image from "next/image";
 import cls from "classnames";
@@ -8,11 +8,38 @@ import cls from "classnames";
 gsap.registerPlugin(ScrollTrigger);
 
 export const NewSinkingBoat = () => {
+  const sinkingBoatContainerRef = useRef<HTMLElement>(null);
+
+  useEffect(() => {
+    const heighSinkingBoatContainer =
+      sinkingBoatContainerRef.current?.clientHeight;
+
+    gsap.fromTo(
+      ".gsap-sinking-boat",
+      {
+        y: 0,
+        scale: 1,
+      },
+      {
+        y: 1270,
+        scale: 40,
+        scrollTrigger: {
+          trigger: "#gsap-sinking-boat-section",
+          start: "top top",
+          end: "bottom top",
+          scrub: true,
+          markers: true,
+        },
+      }
+    );
+  }, []);
+
   return (
-    <section className="relative h-full w-full">
+    <section ref={sinkingBoatContainerRef} className="relative h-full w-full">
       <div
         className={cls(
-          "absolute w-full h-screen z-10",
+          "gsap-sinking-boat",
+          "fixed w-full h-screen z-10",
           styles["sinking-boat-container"]
         )}
       >
@@ -23,6 +50,11 @@ export const NewSinkingBoat = () => {
           style={{ objectFit: "cover" }}
           alt="sinkig boat"
         />
+      </div>
+      <div className={styles["clip"]}>
+        <span
+          className={cls(styles["clipping-circle"], "will-change-transform")}
+        ></span>
       </div>
       {/*  <div className="clip">
         <span className="clipping-circle will-change-transform"></span>
