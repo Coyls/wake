@@ -8,6 +8,10 @@ body {
     overflow-x: hidden;
 }
 
+.background-sky {
+    background: linear-gradient(180deg, #b1cfeb 0%, #eaeff5 100%);
+}
+
 .background-sea {
-    background: linear-gradient(180deg, #b1cfeb 2.65%, #2259c5 38.64%, #213c66 67.76%, #101b2a 100%);
+    background: linear-gradient(180deg, #2259c5 0%, #213c66 50%, #101b2a 70%, #000 100%);
 }

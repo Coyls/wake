@@ -1,13 +1,13 @@
+import { Landing, SinkingBoat, Waves } from "@/components";
 import { Timeline } from "@/components/timeline";
 import { Container } from "@/viewers/container";
 import { DoublePanel } from "@/viewers/double-panel/index";
 import { Panel } from "@/viewers/panel";
 import { Window } from "@/viewers/window";
+import { Lenis as ReactLenis } from "@studio-freight/react-lenis";
+import Image from "next/image";
 import { useEffect, useMemo, useState } from "react";
 import "./index.scss";
-import { Landing, SinkingBoat, Waves } from "@/components";
-import Image from "next/image";
-import { Lenis as ReactLenis } from "@studio-freight/react-lenis";
 
 const steps = {
   0: {
@@ -105,11 +105,12 @@ const View = () => {
   return (
     <>
       <ReactLenis root>
+        <div className="background-sky">
+          <Container></Container>
+          <Container></Container>
+          <Container></Container>
+        </div>
         <div className="background-sea">
-          <Container></Container>
-          <Container></Container>
-          <Container></Container>
-
           <div id="gsap-timeline-section">
             <Container>P4</Container>
             <Container>p5</Container>

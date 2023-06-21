@@ -13,14 +13,9 @@
         left: 50%;
         top: 25%;
         @apply bg-black rounded-full;
-        width: 100px;
-        height: 100px;
+        width: 15vh;
+        height: 15vh;
         transform: translate(-50%, -50%);
-
-        @screen sm {
-            width: 200px;
-            height: 200px;
-        }
     }
 }
 
