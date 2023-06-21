@@ -5,7 +5,7 @@ import { Panel } from "@/viewers/panel";
 import { Window } from "@/viewers/window";
 import { useEffect, useMemo, useState } from "react";
 import "./index.scss";
-import { Landing, NewSinkingBoat, Waves } from "@/components";
+import { Landing, SinkingBoat, Waves } from "@/components";
 import Image from "next/image";
 import { Lenis as ReactLenis } from "@studio-freight/react-lenis";
 
@@ -106,17 +106,17 @@ const View = () => {
     <>
       <ReactLenis root>
         <div className="background-sea">
-          <Container>P1</Container>
-          <Container>P2</Container>
-          <Container>P3</Container>
+          <Container></Container>
+          <Container></Container>
+          <Container></Container>
 
           <div id="gsap-timeline-section">
             <Container>P4</Container>
             <Container>p5</Container>
           </div>
           <div id="gsap-sinking-boat-section">
-            <Container>P6</Container>
-            <Container>P7</Container>
+            <Container></Container>
+            <Container></Container>
           </div>
         </div>
       </ReactLenis>
@@ -162,7 +162,7 @@ const View = () => {
           left={100}
           translate={translation}
         >
-          <NewSinkingBoat />
+          <SinkingBoat />
         </DoublePanel>
         {/* <Panel
           bgColor="transparent"

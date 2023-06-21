@@ -1,18 +1,20 @@
+import cls from "classnames";
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
 import { gsap } from "gsap/dist/gsap";
+import Image from "next/image";
 import { useEffect, useRef } from "react";
 import styles from "./index.module.scss";
-import Image from "next/image";
-import cls from "classnames";
 
 gsap.registerPlugin(ScrollTrigger);
 
-export const NewSinkingBoat = () => {
+const FACTOR = 0.65;
+
+export const SinkingBoat = () => {
   const sinkingBoatContainerRef = useRef<HTMLElement>(null);
 
   useEffect(() => {
     const heighSinkingBoatContainer =
-      sinkingBoatContainerRef.current?.clientHeight;
+      sinkingBoatContainerRef.current?.clientHeight ?? 1250;
 
     gsap.fromTo(
       ".gsap-sinking-boat",
@@ -21,30 +23,46 @@ export const NewSinkingBoat = () => {
         scale: 1,
       },
       {
-        y: 1270,
+        y: heighSinkingBoatContainer * FACTOR,
         scale: 40,
         scrollTrigger: {
           trigger: "#gsap-sinking-boat-section",
           start: "top top",
           end: "bottom top",
           scrub: true,
-          markers: true,
         },
+      }
+    );
+
+    gsap.fromTo(
+      ".gsap-clipping-circle",
+      {
+        scale: 1,
+      },
+      {
+        scrollTrigger: {
+          trigger: "#gsap-sinking-boat-section",
+          start: "top top",
+          scrub: true,
+        },
+        scale: 40,
       }
     );
   }, []);
 
   return (
-    <section ref={sinkingBoatContainerRef} className="relative h-full w-full">
+    <section
+      ref={sinkingBoatContainerRef}
+      className="relative flex flex-col-reverse h-full w-full"
+    >
       <div
         className={cls(
           "gsap-sinking-boat",
-          "fixed w-full h-screen z-10",
-          styles["sinking-boat-container"]
+          "absolute top-0 w-full h-screen z-10"
         )}
       >
         <Image
-          className="sinking-boat will-change-transform"
+          className="will-change-transform"
           src="/svgs/boat.svg"
           fill
           style={{ objectFit: "cover" }}
@@ -53,19 +71,19 @@ export const NewSinkingBoat = () => {
       </div>
       <div className={styles["clip"]}>
         <span
-          className={cls(styles["clipping-circle"], "will-change-transform")}
+          className={cls(
+            "gsap-clipping-circle",
+            "will-change-transform",
+            styles["clipping-circle"]
+          )}
         ></span>
       </div>
-      {/*  <div className="clip">
-        <span className="clipping-circle will-change-transform"></span>
-      </div> */}
-
-      {/* <div className="content">
-        <div className="main-img-con">
+      <div className={styles["content"]}>
+        <div className={styles["main-img-con"]}>
           <img src="images/background.jpg" />
-          <div className="calque"></div>
+          <div className={styles["calque"]}></div>
         </div>
-      </div> */}
+      </div>
     </section>
   );
 };
