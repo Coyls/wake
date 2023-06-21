@@ -1,3 +1,5 @@
+"use client";
+
 import { Landing, SinkingBoat, Waves } from "@/components";
 import { Timeline } from "@/components/timeline";
 import { Container } from "@/viewers/container";
@@ -6,8 +8,9 @@ import { Panel } from "@/viewers/panel";
 import { Window } from "@/viewers/window";
 import { Lenis as ReactLenis } from "@studio-freight/react-lenis";
 import Image from "next/image";
-import { useEffect, useMemo, useState } from "react";
+import { type FC, useEffect, useMemo, useState } from "react";
 import "./index.scss";
+import { Locale } from "../../../i18n-config";
 
 const steps = {
   0: {
@@ -66,7 +69,15 @@ const getRanges = (percent: number) => {
   return [min, max];
 };
 
-const View = () => {
+type Params = {
+  lang: Locale;
+};
+
+type Props = {
+  params: Params;
+};
+
+export const View: FC<Props> = ({ params }) => {
   const [progress, setProgress] = useState(0);
 
   useEffect(() => {
@@ -112,8 +123,8 @@ const View = () => {
         </div>
         <div className="background-sea">
           <div id="gsap-timeline-section">
-            <Container>P4</Container>
-            <Container>p5</Container>
+            <Container></Container>
+            <Container></Container>
           </div>
           <div id="gsap-sinking-boat-section">
             <Container></Container>
