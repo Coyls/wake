@@ -6,28 +6,20 @@ import phareSvg from "@/public/svgs/lighthouse.svg";
 import cls from "classnames";
 
 type Props = {
-  dict: Record<string, string>;
+  dict: Record<any, any>;
 };
 
 export const Beach: FC<Props> = ({ dict }) => {
   return (
     <section className="w-full h-3/4 sm:h-1/2 flex flex-col ">
       <div className="flex flex-col gap-5 pl-[17vh] pr-[5vh]">
-        <h2>Notre exposition</h2>
+        <h2>{dict.beach.h2}</h2>
         <article className="flex flex-col gap-4 text-justify">
-          <p>
-            Fort d’une volonté de d’éveiller les consciences et de rentre les
-            musée ludique l’équipe Shield of the Sea vous propose de vivre
-            l’expérience Wake.
-          </p>
-          <p> Alors qu’est ce que Wake ?</p>
-          <p>
-            C’est une expérience interactive et immersive ayant pour but
-            d’éveiller les consciences au nombreuse problématique de l’océan par
-            le biais du jeu !
-          </p>
-          <p>Alors pourquoi un jeu ? Quelle forme a-t-il ?</p>{" "}
-          <p>Laissez nous vous présenter Marco et Polo !</p>
+          <p>{dict.beach.p1}</p>
+          <p>{dict.beach.p2}</p>
+          <p>{dict.beach.p3}</p>
+          <p>{dict.beach.p4}</p>
+          <p>{dict.beach.p5}</p>
         </article>
       </div>
       <div

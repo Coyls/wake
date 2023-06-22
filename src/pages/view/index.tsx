@@ -68,7 +68,7 @@ const getRanges = (percent: number) => {
 };
 
 type Props = {
-  dict: Record<string, string>;
+  dict: Record<any, any>;
 };
 
 export const View: FC<Props> = ({ dict }) => {
@@ -150,7 +150,7 @@ export const View: FC<Props> = ({ dict }) => {
           left={100}
           translate={translation}
         >
-          <Timeline />
+          <Timeline dict={dict} />
         </DoublePanel>
         <DoublePanel
           bgColor="transparent"
@@ -158,7 +158,7 @@ export const View: FC<Props> = ({ dict }) => {
           left={100}
           translate={translation}
         >
-          <SinkingBoat />
+          <SinkingBoat dict={dict} />
         </DoublePanel>
       </Window>
     </>

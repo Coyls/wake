@@ -1,7 +1,7 @@
 import cls from "classnames";
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
 import { gsap } from "gsap/dist/gsap";
-import { useEffect, useRef, useState } from "react";
+import { type FC, useEffect, useRef, useState } from "react";
 import styles from "./index.module.scss";
 
 gsap.registerPlugin(ScrollTrigger);
@@ -12,11 +12,15 @@ type SvgProps = {
   d: string;
 } | null;
 
+type Props = {
+  dict: Record<any, any>;
+};
+
 // PX
 const OFFSET_LINE = 100;
 const GAP_LINE = 100;
 
-export const Timeline = () => {
+export const Timeline: FC<Props> = ({ dict }) => {
   const timelineRef = useRef<HTMLElement>(null);
   const [lineProps, setLineProps] = useState<SvgProps>(null);
 
@@ -119,52 +123,29 @@ export const Timeline = () => {
 
       <div className="flex flex-col text-white mt-[7%]">
         <article className={styles["info"]}>
-          <h2>La découverte</h2>
+          <h2>{dict.discovery.h2}</h2>
           <article className="flex flex-col">
-            <p>
-              Tout commence le 27 février 2023, lors de notre rencontre avec
-              Marco et Polo.
-            </p>
-            <p>
-              Rapidement la problématique de “Comment éveiller les consciences
-              aux nombreuses problématique de l’océan ?” se pose.
-            </p>
-            <p>
-              On cherche on réfléchit et surtout on ne veut pas braquer. Alors
-              on part dans le projet un peu fou de mêler nouvelles technologies
-              et jeu !
-            </p>
-            <p>C’est partie le projet est lancé !</p>
+            <p>{dict.discovery.p1}</p>
+            <p>{dict.discovery.p2}</p>
+            <p>{dict.discovery.p3}</p>
+            <p>{dict.discovery.p4}</p>
           </article>
         </article>
         <article className={styles["info"]}>
-          <h2>La conception</h2>
+          <h2>{dict.design.h2}</h2>
           <article className="flex flex-col">
-            <p>
-              Dans un premier temps il à fallut penser le jeu, pour qu’il vous
-              plaise et que vous passiez un bon moment au musée.
-            </p>
-            <p>
-              Ensuite on à essayer de recréer le plus fidèlement possible Marco
-              et Polo (et c’était pas facile)
-            </p>
-            <p>
-              Enfin est venu le dur moment du développement, vous savez tout ce
-              code indigeste, et bien c’est aussi ça Wake, une expérience unique
-              à partager avec ses amis pour découvrir de nouvelles technologies.
-            </p>
+            <p>{dict.design.p1}</p>
+            <p>{dict.design.p2}</p>
+            <p>{dict.design.p3}</p>
           </article>
         </article>
         <article className={styles["info"]}>
-          <h2>L’inauguration</h2>
+          <h2>{dict.inauguration.h2}</h2>
           <article className="flex flex-col">
-            <p>Ça y est ! C’est enfin le moment de l’inauguration de Wake !</p>
-            <p>
-              Nous sommes heureux et fière de vous présenter ce projet avec tant
-              de sens et de valeur pour nous !
-            </p>
-            <p>Marco et Polo l’on déjà testé et se sont “ÉCLATÉ”.</p>
-            <p>Alors quand est-ce que vous passez ?</p>
+            <p>{dict.inauguration.p1}</p>
+            <p>{dict.inauguration.p2}</p>
+            <p>{dict.inauguration.p3}</p>
+            <p>{dict.inauguration.p4}</p>
           </article>
         </article>
       </div>
