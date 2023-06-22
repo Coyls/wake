@@ -8,7 +8,7 @@ type Props = {
 
 export const Landing: FC<Props> = ({ dict }) => {
   return (
-    <section className={styles.sky}>
+    <section className="w-full h-full">
       <Navbar />
       <h1>{dict.test}</h1>
     </section>
