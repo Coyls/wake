@@ -3,8 +3,8 @@ import styles from "./navbar.module.scss";
 
 export const Navbar = () => {
   return (
-    <nav className="relative flex flex-row w-full z-10 justify-between py-12 px-52">
-      <div className=" w-28 h-28 bg-black rounded-full"></div>
+    <nav className="relative flex flex-row w-full z-10 justify-between">
+      <div className=" w-[5vh] h-[5vh] bg-black rounded-full"></div>
       <ul className="flex flex-row gap-7 items-center">
         <li>Notre expo</li>
         <li>Notre histoire</li>

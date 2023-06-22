@@ -54,7 +54,7 @@ export const SinkingBoat = () => {
   return (
     <section
       ref={sinkingBoatContainerRef}
-      className="relative flex flex-col-reverse h-full w-full"
+      className="relative flex flex-col h-full w-full text-white"
     >
       <div
         className={cls(
@@ -79,11 +79,15 @@ export const SinkingBoat = () => {
           )}
         ></span>
       </div>
-      <div className={styles["content"]}>
-        <div className={styles["main-img-con"]}>
-          <p className="text-white">IL Y A RIEN A VOIR</p>
-          <div className={styles["calque"]}></div>
-        </div>
+
+      <div className="w-full h-1/2">
+        <article className={cls("absolute text-center px-4", styles["title"])}>
+          <h2>Vous voulez nous trouver ?</h2>
+          <p>{"C'est par là !"}</p>
+        </article>
+      </div>
+      <div className={styles["content-boat"]}>
+        <p>IL Y A RIEN A VOIR</p>
       </div>
     </section>
   );

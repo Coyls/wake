@@ -1,0 +1,6 @@
+.lighthouse-container {
+    transform: translateX(-10vh);
+    @screen sm {
+        transform: translateX(0);
+    }
+}

@@ -76,11 +76,11 @@ export const Timeline = () => {
   return (
     <section
       ref={timelineRef}
-      className="flex flex-row sm:justify-center h-full w-full"
+      className="flex flex-row sm:justify-center h-full w-full pl-[20%] pr-[5%]"
     >
       <div
         className={cls(
-          "absolute w-12 h-12 ml-[10%] sm:ml-0",
+          "absolute w-12 h-12 left-[10%]",
           "gsap-hook-container",
           styles["hook-container"]
         )}
@@ -100,7 +100,7 @@ export const Timeline = () => {
 
       {lineProps && (
         <svg
-          className="relative ml-[10%] sm:ml-0"
+          className="absolute left-[10%] sm:left-[50%]"
           width="2"
           height={lineProps.height}
           viewBox={lineProps.viewBox}
@@ -116,6 +116,58 @@ export const Timeline = () => {
           />
         </svg>
       )}
+
+      <div className="flex flex-col text-white mt-[7%]">
+        <article className={styles["info"]}>
+          <h2>La découverte</h2>
+          <article className="flex flex-col">
+            <p>
+              Tout commence le 27 février 2023, lors de notre rencontre avec
+              Marco et Polo.
+            </p>
+            <p>
+              Rapidement la problématique de “Comment éveiller les consciences
+              aux nombreuses problématique de l’océan ?” se pose.
+            </p>
+            <p>
+              On cherche on réfléchit et surtout on ne veut pas braquer. Alors
+              on part dans le projet un peu fou de mêler nouvelles technologies
+              et jeu !
+            </p>
+            <p>C’est partie le projet est lancé !</p>
+          </article>
+        </article>
+        <article className={styles["info"]}>
+          <h2>La conception</h2>
+          <article className="flex flex-col">
+            <p>
+              Dans un premier temps il à fallut penser le jeu, pour qu’il vous
+              plaise et que vous passiez un bon moment au musée.
+            </p>
+            <p>
+              Ensuite on à essayer de recréer le plus fidèlement possible Marco
+              et Polo (et c’était pas facile)
+            </p>
+            <p>
+              Enfin est venu le dur moment du développement, vous savez tout ce
+              code indigeste, et bien c’est aussi ça Wake, une expérience unique
+              à partager avec ses amis pour découvrir de nouvelles technologies.
+            </p>
+          </article>
+        </article>
+        <article className={styles["info"]}>
+          <h2>L’inauguration</h2>
+          <article className="flex flex-col">
+            <p>Ça y est ! C’est enfin le moment de l’inauguration de Wake !</p>
+            <p>
+              Nous sommes heureux et fière de vous présenter ce projet avec tant
+              de sens et de valeur pour nous !
+            </p>
+            <p>Marco et Polo l’on déjà testé et se sont “ÉCLATÉ”.</p>
+            <p>Alors quand est-ce que vous passez ?</p>
+          </article>
+        </article>
+      </div>
     </section>
   );
 };
