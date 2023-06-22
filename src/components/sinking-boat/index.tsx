@@ -4,6 +4,7 @@ import { gsap } from "gsap/dist/gsap";
 import Image from "next/image";
 import { useEffect, useRef } from "react";
 import styles from "./index.module.scss";
+import sinkingBoatSvg from "@/public/svgs/boat.svg";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -63,7 +64,7 @@ export const SinkingBoat = () => {
       >
         <Image
           className="will-change-transform"
-          src="/svgs/boat.svg"
+          src={sinkingBoatSvg}
           fill
           style={{ objectFit: "cover" }}
           alt="sinkig boat"
@@ -80,7 +81,7 @@ export const SinkingBoat = () => {
       </div>
       <div className={styles["content"]}>
         <div className={styles["main-img-con"]}>
-          <img src="images/background.jpg" />
+          <p className="text-white">IL Y A RIEN A VOIR</p>
           <div className={styles["calque"]}></div>
         </div>
       </div>

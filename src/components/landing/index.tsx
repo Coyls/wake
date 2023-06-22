@@ -1,14 +1,16 @@
-import styles from "./index.module.scss";
+import { type FC } from "react";
 import { Navbar } from "../navbar/navbar";
-// import { useTranslation } from "next-i18next";
+import styles from "./index.module.scss";
 
-export const Landing = () => {
-  // const { t } = useTranslation();
+type Props = {
+  dict: Record<string, string>;
+};
 
+export const Landing: FC<Props> = ({ dict }) => {
   return (
     <section className={styles.sky}>
       <Navbar />
-      {/* <h1>{t("Welcome to React")}</h1> */}
+      <h1>{dict.test}</h1>
     </section>
   );
 };

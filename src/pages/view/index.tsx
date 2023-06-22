@@ -2,15 +2,18 @@
 
 import { Landing, SinkingBoat, Waves } from "@/components";
 import { Timeline } from "@/components/timeline";
+import beachSvg from "@/public/svgs/beach.svg";
+import fishermanSvg from "@/public/svgs/fisherman.svg";
+import phareSvg from "@/public/svgs/lighthouse.svg";
 import { Container } from "@/viewers/container";
 import { DoublePanel } from "@/viewers/double-panel/index";
 import { Panel } from "@/viewers/panel";
 import { Window } from "@/viewers/window";
 import { Lenis as ReactLenis } from "@studio-freight/react-lenis";
 import Image from "next/image";
-import { type FC, useEffect, useMemo, useState } from "react";
-import "./index.scss";
+import { useEffect, useMemo, useState, type FC } from "react";
 import { Locale } from "../../../i18n-config";
+import "./index.scss";
 
 const steps = {
   0: {
@@ -69,15 +72,11 @@ const getRanges = (percent: number) => {
   return [min, max];
 };
 
-type Params = {
-  lang: Locale;
-};
-
 type Props = {
-  params: Params;
+  dict: Record<string, string>;
 };
 
-export const View: FC<Props> = ({ params }) => {
+export const View: FC<Props> = ({ dict }) => {
   const [progress, setProgress] = useState(0);
 
   useEffect(() => {
@@ -134,14 +133,14 @@ export const View: FC<Props> = ({ params }) => {
       </ReactLenis>
       <Window>
         <Panel bgColor="transparent" top={0} left={0} translate={translation}>
-          <Landing />
+          <Landing dict={dict} />
         </Panel>
         <Panel bgColor="transparent" top={100} left={0} translate={translation}>
           <div className="absolute w-[40vh] h-[160vh] left-0 bottom-0">
-            <Image priority src="/svgs/phare.svg" alt="lighthouse" fill />
+            <Image priority src={phareSvg} alt="lighthouse" fill />
           </div>
           <div className="absolute w-[320vh] h-[25vh] right-0 bottom-0 z-30">
-            <Image src="/svgs/plage.svg" alt="beach" fill />
+            <Image src={beachSvg} alt="beach" fill />
           </div>
         </Panel>
         <Panel
@@ -152,7 +151,7 @@ export const View: FC<Props> = ({ params }) => {
         >
           <div className="absolute w-[200vh] h-[100vh] left-[10%] sm:left-1/2 bottom-0">
             <Image
-              src="/svgs/fisher.svg"
+              src={fishermanSvg}
               style={{ objectFit: "cover" }}
               alt="fisherman"
               fill
@@ -176,28 +175,6 @@ export const View: FC<Props> = ({ params }) => {
         >
           <SinkingBoat />
         </DoublePanel>
-        {/* <Panel
-          bgColor="transparent"
-          top={400}
-          left={100}
-          translate={translation}
-        >
-          <div className="absolute w-full h-full z-10">
-            <Image
-              className="sinking-boat will-change-transform"
-              src="/svgs/boat.svg"
-              fill
-              style={{ objectFit: "cover" }}
-              alt="sinkig boat"
-            />
-          </div>
-        </Panel>
-        <Panel
-          bgColor="green"
-          top={500}
-          left={100}
-          translate={translation}
-        ></Panel> */}
       </Window>
     </>
   );
