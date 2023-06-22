@@ -3,7 +3,7 @@ import styles from "./navbar.module.scss";
 
 export const Navbar = () => {
   return (
-    <nav className="absolute flex flex-row w-full z-10 justify-between py-12 px-52">
+    <nav className="relative flex flex-row w-full z-10 justify-between py-12 px-52">
       <div className=" w-28 h-28 bg-black rounded-full"></div>
       <ul className="flex flex-row gap-7 items-center">
         <li>Notre expo</li>
