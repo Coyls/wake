@@ -37,10 +37,9 @@ export const Timeline: FC<Props> = ({ dict }) => {
           strokeDashoffset: 0,
           scrollTrigger: {
             trigger: "#gsap-timeline-section",
-            start: "top",
+            start: "top 40%",
             end: "bottom top",
             scrub: true,
-            // markers: true,
           },
         }
       );
@@ -54,7 +53,7 @@ export const Timeline: FC<Props> = ({ dict }) => {
           y: lineSize + GAP_LINE,
           scrollTrigger: {
             trigger: "#gsap-timeline-section",
-            start: "top",
+            start: "top 40%",
             end: "bottom top",
             scrub: true,
           },
@@ -78,13 +77,10 @@ export const Timeline: FC<Props> = ({ dict }) => {
   }, []);
 
   return (
-    <section
-      ref={timelineRef}
-      className="flex flex-row sm:justify-center h-full w-full pl-[20%] pr-[5%]"
-    >
+    <section ref={timelineRef} className="flex flex-row  h-full w-full ">
       <div
         className={cls(
-          "absolute w-12 h-12 left-[10%]",
+          "absolute w-12 h-12 left-[10%] sm:left-[50%]",
           "gsap-hook-container",
           styles["hook-container"]
         )}
@@ -121,7 +117,7 @@ export const Timeline: FC<Props> = ({ dict }) => {
         </svg>
       )}
 
-      <div className="flex flex-col text-white mt-[7%]">
+      <div className={styles["info-container"]}>
         <article className={styles["info"]}>
           <h2>{dict.discovery.h2}</h2>
           <article className="flex flex-col">

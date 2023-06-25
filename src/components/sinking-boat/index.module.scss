@@ -20,8 +20,12 @@
 }
 
 .where {
-    @apply flex flex-col gap-[4vh];
+    @apply flex flex-col gap-[4vh] px-[7vh];
     li {
         @apply flex flex-row items-center gap-[3.5vh];
+
+        .icon-container {
+            @apply relative w-8 h-8 sm:w-16 sm:h-16;
+        }
     }
 }

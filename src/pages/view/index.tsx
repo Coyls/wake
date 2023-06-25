@@ -112,8 +112,12 @@ export const View: FC<Props> = ({ dict }) => {
       <ReactLenis root>
         <div className="background-sky">
           <Container></Container>
-          <Container></Container>
-          <Container></Container>
+          <div id="our-exposition">
+            <Container></Container>
+          </div>
+          <div id="our-story">
+            <Container></Container>
+          </div>
         </div>
         <div className="background-sea">
           <div id="gsap-timeline-section">
@@ -121,7 +125,9 @@ export const View: FC<Props> = ({ dict }) => {
             <Container></Container>
           </div>
           <div id="gsap-sinking-boat-section">
-            <Container></Container>
+            <div id="where">
+              <Container></Container>
+            </div>
             <Container></Container>
           </div>
         </div>

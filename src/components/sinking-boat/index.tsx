@@ -89,39 +89,40 @@ export const SinkingBoat: FC<Props> = ({ dict }) => {
       </div>
 
       <div className="w-full h-1/2">
-        <article className={cls("absolute text-center px-4", styles["title"])}>
+        <article className="relative text-center px-4">
           <h2>{dict["find-us"].h2}</h2>
           <p>{dict["find-us"].p1}</p>
         </article>
       </div>
-      <div className="relative flex flex-col h-1/2 w-full gap-[5vh]">
-        <div className="flex flex-col gap-[5vh] px-[7vh] pt-[5vh]">
-          <article className="flex flex-col gap-[1.5vh]">
-            <h2>{dict.where.h2}</h2>
-            <p>{dict.where.p1}</p>
-          </article>
+      <div className="relative flex flex-col h-1/2 w-full gap-[5vh] sm:gap-[10vh]">
+        <article className="flex flex-col gap-[1.5vh] px-[7vh] pt-[5vh]">
+          <h2>{dict.where.h2}</h2>
+          <p>{dict.where.p1}</p>
+        </article>
+        <div className="flex flex-col sm:flex-row sm:items-center gap-[5vh]  sm:w-full sm:justify-center">
           <ul className={styles["where"]}>
             <li>
-              <Image
-                src={iconCompass}
-                width={32}
-                height={32}
-                alt="icon compass"
-              />
+              <div className={styles["icon-container"]}>
+                <Image src={iconCompass} alt="icon compass" fill />
+              </div>
               <p>3 Esplanade Augustin Aussedat 74960, Cran-gevrier</p>
             </li>
             <li>
-              <Image src={iconCross} width={32} height={32} alt="icon cross" />
+              <div className={styles["icon-container"]}>
+                <Image src={iconCross} alt="icon cross" fill />
+              </div>
               <p>45.9,6.11667</p>
             </li>
             <li>
-              <Image src={iconPhone} width={32} height={32} alt="icon phone" />
+              <div className={styles["icon-container"]}>
+                <Image src={iconPhone} alt="icon phone" fill />
+              </div>
               <p>06 07 89 10 13</p>
             </li>
           </ul>
-        </div>
-        <div className="relative w-full h-[35vh]">
-          <Image src={map} alt="map" style={{ objectFit: "cover" }} fill />
+          <div className="relative w-full sm:w-[40%] h-[35vh]">
+            <Image src={map} alt="map" style={{ objectFit: "cover" }} fill />
+          </div>
         </div>
       </div>
     </section>

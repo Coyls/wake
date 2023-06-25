@@ -1,4 +1,9 @@
 {
+  "nav": {
+    "link1": "Our exhibition",
+    "link2": "Our story",
+    "link3": "Where can you find us?"
+  },
   "beach": {
     "h2": "Our exhibition",
     "p1": "The Shield of the Sea team is committed to raising awareness and making museums fun, and invites you to take part in the Wake experience.",

@@ -1,4 +1,9 @@
 {
+  "nav": {
+    "link1": "Notre expo",
+    "link2": "Notre histoire",
+    "link3": "Où nous trouvez ?"
+  },
   "beach": {
     "h2": "Notre exposition",
     "p1": "Fort d’une volonté de d’éveiller les consciences et de rentre les musée ludique l’équipe Shield of the Sea vous propose de vivre l’expérience Wake.",

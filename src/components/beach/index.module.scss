@@ -4,3 +4,9 @@
         transform: translateX(0);
     }
 }
+
+.mandp-container {
+    @screen sm {
+        transform: translate(50%);
+    }
+}

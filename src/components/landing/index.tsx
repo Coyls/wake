@@ -9,7 +9,7 @@ type Props = {
 export const Landing: FC<Props> = ({ dict }) => {
   return (
     <section className="w-full h-1/4 sm:h-1/2">
-      <Navbar />
+      <Navbar dict={dict} />
     </section>
   );
 };
