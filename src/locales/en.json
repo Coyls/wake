@@ -1,8 +1,21 @@
 {
   "nav": {
-    "link1": "Our exhibition",
-    "link2": "Our story",
-    "link3": "Where can you find us?"
+    "link1": {
+      "sm": "Our exhibition",
+      "mobile": "Exhibition"
+    },
+    "link2": {
+      "sm": "Our story",
+      "mobile": "Story"
+    },
+    "link3": {
+      "sm": "Where can you find us?",
+      "mobile": "Where?"
+    },
+    "switch": {
+      "label": "En",
+      "href": "/fr"
+    }
   },
   "beach": {
     "h2": "Our exhibition",

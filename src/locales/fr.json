@@ -1,8 +1,21 @@
 {
   "nav": {
-    "link1": "Notre expo",
-    "link2": "Notre histoire",
-    "link3": "Où nous trouvez ?"
+    "link1": {
+      "sm": "Notre expo",
+      "mobile": "Expo"
+    },
+    "link2": {
+      "sm": "Notre histoire",
+      "mobile": "Histoire"
+    },
+    "link3": {
+      "sm": "Où nous trouvez ?",
+      "mobile": "Ou ?"
+    },
+    "switch": {
+      "label": "Fr",
+      "href": "/en"
+    }
   },
   "beach": {
     "h2": "Notre exposition",
