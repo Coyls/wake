@@ -8,17 +8,22 @@ type Props = {
 
 export const Navbar: FC<Props> = ({ dict }) => {
   return (
-    <nav className="relative flex flex-row w-full z-10 justify-between px-[10%] pt-[5vh]">
-      <div className=" w-[5vh] h-[5vh] bg-black rounded-full"></div>
+    <nav className="relative flex flex-row w-full z-10 justify-end px-[10%] pt-[5vh]">
       <ul className={cls("flex flex-row gap-7 items-center", styles["menu"])}>
         <li>
-          <a href="#our-exposition">{dict.nav.link1}</a>
+          <a className="nav-text" href="#our-exposition">
+            {dict.nav.link1}
+          </a>
         </li>
         <li>
-          <a href="#our-story">{dict.nav.link2}</a>
+          <a className="nav-text" href="#our-story">
+            {dict.nav.link2}
+          </a>
         </li>
         <li>
-          <a href="#where">{dict.nav.link3}</a>
+          <a className="nav-text" href="#where">
+            {dict.nav.link3}
+          </a>
         </li>
       </ul>
     </nav>

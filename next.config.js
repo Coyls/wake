@@ -5,8 +5,8 @@ module.exports = {
         includePaths: [path.join(__dirname, 'styles')],
     },
 
-    i18n: {
+    /* i18n: {
         defaultLocale: "fr",
         locales: ["fr", "en"],
-    },
+    }, */
 };  

@@ -2,12 +2,30 @@
 @tailwind components;
 @tailwind utilities;
 
+@font-face {
+    font-family: "PPRightGrotesk-Bold";
+    src: url("../../public/fonts/PPRightGrotesk-Bold.otf");
+}
+@font-face {
+    font-family: "Comfortaa-Regular";
+    src: url("../../public/fonts/Comfortaa-Regular.ttf");
+}
+/* 
+@font-face {
+    font-family: "PPPangramSansRounded-Regular";
+    src: url("../../public/fonts/PPPangramSansRounded-Regular.otf");
+} */
+
+// @import url("https://fonts.googleapis.com/css2?family=Comfortaa&display=swap");
+
 html,
 body {
     margin: 0;
     overflow-x: hidden;
     font-size: 16px;
-    color: #1a3441;
+    color: #2259c5;
+    // font-family: "PPPangramSansRounded-Regular";
+    font-family: "Comfortaa-Regular", cursive;
     @screen sm {
         font-size: 20px;
     }
@@ -24,8 +42,13 @@ body {
 h2 {
     font-size: 32px;
     font-weight: bold;
+    font-family: "PPRightGrotesk-Bold";
 
     @screen sm {
         font-size: 40px;
     }
+}
+
+.nav-text {
+    font-family: "PPRightGrotesk-Bold";
 }
