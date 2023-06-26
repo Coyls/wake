@@ -71,7 +71,7 @@ export const SinkingBoat: FC<Props> = ({ dict }) => {
         )}
       >
         <Image
-          className="will-change-transform"
+          // className="will-change-transform"
           src={sinkingBoatSvg}
           fill
           style={{ objectFit: "cover" }}

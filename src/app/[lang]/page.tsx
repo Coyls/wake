@@ -1,6 +1,6 @@
-import View from "@/pages/view";
+import View from "@/components/view";
 import { Locale } from "../../../i18n-config";
-import { getDictionary } from "./dictionaries/dictionaries";
+import { getDictionary } from "../../locales/dictionaries";
 
 type Params = {
   lang: Locale;
