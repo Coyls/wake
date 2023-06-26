@@ -1,3 +1,49 @@
 {
-    "test": "Sentence in English"
+  "nav": {
+    "link1": "Our exhibition",
+    "link2": "Our story",
+    "link3": "Where can you find us?"
+  },
+  "beach": {
+    "h2": "Our exhibition",
+    "p1": "The Shield of the Sea team is committed to raising awareness and making museums fun, and invites you to take part in the Wake experience.",
+    "p2": "So what is Wake?",
+    "p3": "It's an interactive, immersive experience designed to raise awareness of the ocean's many problems through games!",
+    "p4": "So why a game? What form does it take?",
+    "p5": "Let us introduce you to Marco and Polo!"
+  },
+  "sea": {
+    "h2": "Our story",
+    "p1": "We met Marco & Polo during a short stay in Dauville.",
+    "p2": "We were touched by their stories and their problems!",
+    "p3": "So we wanted to do something to help them fight back. So how did Wake come about?"
+  },
+  "discovery": {
+    "h2": "The discovery",
+    "p1": "It all begins on February 27, 2023, when we meet Marco and Polo.",
+    "p2": "The question quickly arose: \"How can we raise awareness of the ocean's many problems?\"",
+    "p3": "We're looking, we're thinking and, above all, we don't want to show off. So we set off on the crazy project of combining new technologies and gaming!",
+    "p4": "The project is off and running!"
+  },
+  "design": {
+    "h2": "The design",
+    "p1": "First we had to think up the game, so that you'd like it and have a good time at the museum",
+    "p2": "Then we tried to recreate Marco and Polo as faithfully as possible (and it wasn't easy)",
+    "p3": "Finally came the hard part of development, you know all that indigestible code, and well that's Wake too, a unique experience to share with friends and discover new technologies."
+  },
+  "inauguration": {
+    "h2": "The inauguration",
+    "p1": "This is it! It's finally time for the inauguration of Wake!",
+    "p2": "We are happy and proud to present this project with so much meaning and value for us!",
+    "p3": "Marco and Polo have already tried it out, and they were \"AMAZED\"",
+    "p4": "So when are you coming over?"
+  },
+  "find-us": {
+    "h2": "Do you want to find us?",
+    "p1": "It's this way!"
+  },
+  "where": {
+    "h2": "So where are we?",
+    "p1": "So don't worry! No need for snorkels and fins, we're right here!"
+  }
 }

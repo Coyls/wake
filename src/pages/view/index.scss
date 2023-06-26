@@ -6,6 +6,11 @@ html,
 body {
     margin: 0;
     overflow-x: hidden;
+    font-size: 16px;
+    color: #1a3441;
+    @screen sm {
+        font-size: 20px;
+    }
 }
 
 .background-sky {
@@ -14,4 +19,13 @@ body {
 
 .background-sea {
     background: linear-gradient(180deg, #2259c5 0%, #213c66 50%, #101b2a 70%, #000 100%);
+}
+
+h2 {
+    font-size: 32px;
+    font-weight: bold;
+
+    @screen sm {
+        font-size: 40px;
+    }
 }

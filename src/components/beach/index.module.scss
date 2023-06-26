@@ -1,0 +1,12 @@
+.lighthouse-container {
+    transform: translateX(-10vh);
+    @screen sm {
+        transform: translateX(0);
+    }
+}
+
+.mandp-container {
+    @screen sm {
+        transform: translate(50%);
+    }
+}

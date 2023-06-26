@@ -19,30 +19,13 @@
     }
 }
 
-.content {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 10px;
-    position: relative;
-    height: 50%;
-    width: 100%;
+.where {
+    @apply flex flex-col gap-[4vh] px-[7vh];
+    li {
+        @apply flex flex-row items-center gap-[3.5vh];
 
-    // !! DEMO
-    .main-img-con {
-        position: relative;
-        img {
-            width: 50vw;
-            height: 100%;
-        }
-        .calque {
-            position: absolute;
-            top: 0;
-            bottom: 0;
-            left: 0;
-            right: 0;
-            background: radial-gradient(circle, rgba(255, 255, 255, 0) 0%, rgba(0, 0, 0, 1) 60%);
+        .icon-container {
+            @apply relative w-8 h-8 sm:w-16 sm:h-16;
         }
     }
 }

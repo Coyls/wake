@@ -1,6 +1,31 @@
 .hook-container {
     transform: translateX(-47%);
+}
+
+.info-container {
+    @apply flex flex-col text-white mt-[7%] pl-[20%] pr-[5%];
+
     @screen sm {
-        transform: translateX(0);
+        @apply w-full mt-[10%] px-[10%] gap-[10%];
+    }
+}
+
+.info {
+    @apply flex flex-col h-[32%] gap-4;
+
+    @screen sm {
+        @apply h-auto max-w-[40%];
+
+        &:nth-child(odd) {
+            align-self: flex-end;
+        }
+
+        &:nth-child(even) {
+            text-align: right;
+        }
+    }
+
+    article {
+        @apply flex flex-col gap-3;
     }
 }

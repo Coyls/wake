@@ -1,18 +1,13 @@
 "use client";
 
-import { Landing, SinkingBoat, Waves } from "@/components";
+import { Landing, SinkingBoat, Waves, Beach, Sea } from "@/components";
 import { Timeline } from "@/components/timeline";
-import beachSvg from "@/public/svgs/beach.svg";
-import fishermanSvg from "@/public/svgs/fisherman.svg";
-import phareSvg from "@/public/svgs/lighthouse.svg";
 import { Container } from "@/viewers/container";
 import { DoublePanel } from "@/viewers/double-panel/index";
 import { Panel } from "@/viewers/panel";
 import { Window } from "@/viewers/window";
 import { Lenis as ReactLenis } from "@studio-freight/react-lenis";
-import Image from "next/image";
 import { useEffect, useMemo, useState, type FC } from "react";
-import { Locale } from "../../../i18n-config";
 import "./index.scss";
 
 const steps = {
@@ -73,7 +68,7 @@ const getRanges = (percent: number) => {
 };
 
 type Props = {
-  dict: Record<string, string>;
+  dict: Record<any, any>;
 };
 
 export const View: FC<Props> = ({ dict }) => {
@@ -117,8 +112,12 @@ export const View: FC<Props> = ({ dict }) => {
       <ReactLenis root>
         <div className="background-sky">
           <Container></Container>
-          <Container></Container>
-          <Container></Container>
+          <div id="our-exposition">
+            <Container></Container>
+          </div>
+          <div id="our-story">
+            <Container></Container>
+          </div>
         </div>
         <div className="background-sea">
           <div id="gsap-timeline-section">
@@ -126,38 +125,30 @@ export const View: FC<Props> = ({ dict }) => {
             <Container></Container>
           </div>
           <div id="gsap-sinking-boat-section">
-            <Container></Container>
+            <div id="where">
+              <Container></Container>
+            </div>
             <Container></Container>
           </div>
         </div>
       </ReactLenis>
       <Window>
-        <Panel bgColor="transparent" top={0} left={0} translate={translation}>
+        <DoublePanel
+          bgColor="transparent"
+          top={0}
+          left={0}
+          translate={translation}
+        >
           <Landing dict={dict} />
-        </Panel>
-        <Panel bgColor="transparent" top={100} left={0} translate={translation}>
-          <div className="absolute w-[40vh] h-[160vh] left-0 bottom-0">
-            <Image priority src={phareSvg} alt="lighthouse" fill />
-          </div>
-          <div className="absolute w-[320vh] h-[25vh] right-0 bottom-0 z-30">
-            <Image src={beachSvg} alt="beach" fill />
-          </div>
-        </Panel>
+          <Beach dict={dict} />
+        </DoublePanel>
         <Panel
           bgColor="transparent"
           top={100}
           left={100}
           translate={translation}
         >
-          <div className="absolute w-[200vh] h-[100vh] left-[10%] sm:left-1/2 bottom-0">
-            <Image
-              src={fishermanSvg}
-              style={{ objectFit: "cover" }}
-              alt="fisherman"
-              fill
-            />
-          </div>
-          <Waves />
+          <Sea dict={dict} />
         </Panel>
         <DoublePanel
           bgColor="transparent"
@@ -165,7 +156,7 @@ export const View: FC<Props> = ({ dict }) => {
           left={100}
           translate={translation}
         >
-          <Timeline />
+          <Timeline dict={dict} />
         </DoublePanel>
         <DoublePanel
           bgColor="transparent"
@@ -173,7 +164,7 @@ export const View: FC<Props> = ({ dict }) => {
           left={100}
           translate={translation}
         >
-          <SinkingBoat />
+          <SinkingBoat dict={dict} />
         </DoublePanel>
       </Window>
     </>

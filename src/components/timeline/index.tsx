@@ -1,7 +1,7 @@
 import cls from "classnames";
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
 import { gsap } from "gsap/dist/gsap";
-import { useEffect, useRef, useState } from "react";
+import { type FC, useEffect, useRef, useState } from "react";
 import styles from "./index.module.scss";
 
 gsap.registerPlugin(ScrollTrigger);
@@ -12,11 +12,15 @@ type SvgProps = {
   d: string;
 } | null;
 
+type Props = {
+  dict: Record<any, any>;
+};
+
 // PX
 const OFFSET_LINE = 100;
 const GAP_LINE = 100;
 
-export const Timeline = () => {
+export const Timeline: FC<Props> = ({ dict }) => {
   const timelineRef = useRef<HTMLElement>(null);
   const [lineProps, setLineProps] = useState<SvgProps>(null);
 
@@ -33,10 +37,9 @@ export const Timeline = () => {
           strokeDashoffset: 0,
           scrollTrigger: {
             trigger: "#gsap-timeline-section",
-            start: "top",
+            start: "top 40%",
             end: "bottom top",
             scrub: true,
-            // markers: true,
           },
         }
       );
@@ -50,7 +53,7 @@ export const Timeline = () => {
           y: lineSize + GAP_LINE,
           scrollTrigger: {
             trigger: "#gsap-timeline-section",
-            start: "top",
+            start: "top 40%",
             end: "bottom top",
             scrub: true,
           },
@@ -74,13 +77,10 @@ export const Timeline = () => {
   }, []);
 
   return (
-    <section
-      ref={timelineRef}
-      className="flex flex-row sm:justify-center h-full w-full"
-    >
+    <section ref={timelineRef} className="flex flex-row  h-full w-full ">
       <div
         className={cls(
-          "absolute w-12 h-12 ml-[10%] sm:ml-0",
+          "absolute w-12 h-12 left-[10%] sm:left-[50%]",
           "gsap-hook-container",
           styles["hook-container"]
         )}
@@ -100,7 +100,7 @@ export const Timeline = () => {
 
       {lineProps && (
         <svg
-          className="relative ml-[10%] sm:ml-0"
+          className="absolute left-[10%] sm:left-[50%]"
           width="2"
           height={lineProps.height}
           viewBox={lineProps.viewBox}
@@ -116,6 +116,35 @@ export const Timeline = () => {
           />
         </svg>
       )}
+
+      <div className={styles["info-container"]}>
+        <article className={styles["info"]}>
+          <h2>{dict.discovery.h2}</h2>
+          <article className="flex flex-col">
+            <p>{dict.discovery.p1}</p>
+            <p>{dict.discovery.p2}</p>
+            <p>{dict.discovery.p3}</p>
+            <p>{dict.discovery.p4}</p>
+          </article>
+        </article>
+        <article className={styles["info"]}>
+          <h2>{dict.design.h2}</h2>
+          <article className="flex flex-col">
+            <p>{dict.design.p1}</p>
+            <p>{dict.design.p2}</p>
+            <p>{dict.design.p3}</p>
+          </article>
+        </article>
+        <article className={styles["info"]}>
+          <h2>{dict.inauguration.h2}</h2>
+          <article className="flex flex-col">
+            <p>{dict.inauguration.p1}</p>
+            <p>{dict.inauguration.p2}</p>
+            <p>{dict.inauguration.p3}</p>
+            <p>{dict.inauguration.p4}</p>
+          </article>
+        </article>
+      </div>
     </section>
   );
 };
