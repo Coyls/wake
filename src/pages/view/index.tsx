@@ -12,7 +12,6 @@ import { Window } from "@/viewers/window";
 import { Lenis as ReactLenis } from "@studio-freight/react-lenis";
 import Image from "next/image";
 import { useEffect, useMemo, useState, type FC } from "react";
-import { Locale } from "../../../i18n-config";
 import "./index.scss";
 
 const steps = {

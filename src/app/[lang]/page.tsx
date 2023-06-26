@@ -10,7 +10,7 @@ type Props = {
   params: Params;
 };
 
-export const Page = async (props: Props) => {
+const Page = async (props: Props) => {
   const { lang } = props.params;
   const dict = await getDictionary(lang);
   return <View dict={dict} />;
