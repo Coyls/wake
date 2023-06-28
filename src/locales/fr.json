@@ -9,8 +9,8 @@
       "mobile": "Histoire"
     },
     "link3": {
-      "sm": "Où nous trouvez ?",
-      "mobile": "Ou ?"
+      "sm": "Où nous trouver ?",
+      "mobile": "Où ?"
     },
     "switch": {
       "label": "Fr",
@@ -19,36 +19,36 @@
   },
   "beach": {
     "h2": "Notre exposition",
-    "p1": "Fort d’une volonté de d’éveiller les consciences et de rentre les musée ludique l’équipe Shield of the Sea vous propose de vivre l’expérience Wake.",
+    "p1": "Fort d’une volonté dé d’éveiller les consciences et de rendre les musées ludiques l’équipe Shield of the Sea vous propose de vivre l’expérience Wake.",
     "p2": "Alors qu’est ce que Wake ?",
-    "p3": "C’est une expérience interactive et immersive ayant pour but d’éveiller les consciences au nombreuse problématique de l’océan par le biais du jeu !",
+    "p3": "C’est une expérience interactive et immersive ayant pour but d’éveiller les consciences aux nombreuse problématiques de l’océan par le biais du jeu !",
     "p4": "Alors pourquoi un jeu ? Quelle forme a-t-il ?",
     "p5": "Laissez nous vous présenter Marco et Polo !"
   },
   "sea": {
     "h2": "Notre histoire",
-    "p1": "Nous avons rencontré Marco & Polo pendant un petit séjour à Dauville.",
-    "p2": "Nous avons été touché par leurs histoire et leur problèmes !",
+    "p1": "Nous avons rencontré Marco & Polo pendant un petit séjour à Deauville.",
+    "p2": "Nous avons été touché par leurs histoires et leurs problèmes !",
     "p3": "Nous avons donc voulu agir pour les aider à lutter. Mais alors comment est né Wake ?"
   },
   "discovery": {
     "h2": "La découverte",
     "p1": "Tout commence le 27 février 2023, lors de notre rencontre avec Marco et Polo.",
-    "p2": "Rapidement la problématique de “Comment éveiller les consciences aux nombreuses problématique de l’océan ?” se pose.",
+    "p2": "Rapidement la problématique de “Comment éveiller les consciences aux nombreuses problématiques de l’océan ?” se posent.",
     "p3": "On cherche on réfléchit et surtout on ne veut pas braquer. Alors on part dans le projet un peu fou de mêler nouvelles technologies et jeu !",
     "p4": "C’est partie le projet est lancé !"
   },
   "design": {
     "h2": "La conception",
-    "p1": "Dans un premier temps il à fallut penser le jeu, pour qu’il vous plaise et que vous passiez un bon moment au musée.",
-    "p2": "Ensuite on à essayer de recréer le plus fidèlement possible Marco et Polo (et c’était pas facile)",
-    "p3": "Enfin est venu le dur moment du développement, vous savez tout ce code indigeste, et bien c’est aussi ça Wake, une expérience uniqueà partager avec ses amis pour découvrir de nouvelles technologies."
+    "p1": "Dans un premier temps il a fallu penser le jeu, pour qu’il vous plaise et que vous passiez un bon moment au musée.",
+    "p2": "Ensuite on a essayé de recréer le plus fidèlement possible Marco et Polo (et ce n'était pas facile)",
+    "p3": "Enfin est venu le dur moment du développement, vous savez tout ce code indigeste, et bien c’est aussi ça Wake, une expérience unique à partager avec ses amis pour découvrir de nouvelles technologies."
   },
   "inauguration": {
     "h2": "L’inauguration",
     "p1": "Ça y est ! C’est enfin le moment de l’inauguration de Wake !",
     "p2": "Nous sommes heureux et fière de vous présenter ce projet avec tant de sens et de valeur pour nous !",
-    "p3": "Marco et Polo l’on déjà testé et se sont “ÉCLATÉ”.",
+    "p3": "Marco et Polo l’ont déjà testé et se sont “ÉCLATÉ”.",
     "p4": "Alors quand est-ce que vous passez ?"
   },
   "find-us": {
@@ -56,7 +56,7 @@
     "p1": "C'est par là !"
   },
   "where": {
-    "h2": "Alors où sommes nous ?",
-    "p1": "Alors rassurez vous ! Pas besoin de tuba et de palme, on est juste là !"
+    "h2": "Alors où sommes-nous ?",
+    "p1": "Alors rassurez-vous ! Pas besoin de tuba et de palme, on est juste là !"
   }
 }
